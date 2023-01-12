@@ -6,23 +6,14 @@
     padding: 60px 0;
 
     & address {
-        
         margin-top: 20px;
         font-style: normal;
+    }
 
-        &__list {
-
-            &__item {
-
-                &:not(:last-child) {
-
-                    margin-bottom: 9px;
-                }
-            }
-        }
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
     }
 }
-
 .footer-logo {
     padding-left: 0;
 }
@@ -35,17 +26,17 @@
     line-height: 1.7;
     transition: color $transitionKit;
 
-        &--map {
-            color: $colorSecondary;
-        }
+    &--map {
+        color: $colorSecondary;
+     }
 
-        &--gray {
-            color: $colorTransparentSecondary;
-        }
+    &--gray {
+        color: $colorTransparentSecondary;
+    }
 
-        &:hover, &:focus {
-            color: $colorAccent;
-        }
+    &:hover, &:focus {
+        color: $colorAccent;
+    }
 }
 
 .footer .container {

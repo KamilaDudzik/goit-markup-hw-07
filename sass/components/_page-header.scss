@@ -13,30 +13,33 @@
 
       &:not(:last-child) {
         margin-right: 43px;
+      }
     }
-  }
-}
 
-// Nav 
+    &__links {
+      margin-left: 94px;
+      margin-right: 345px;
+      gap: 0 46px;
+      display: flex;
+    }
+} 
 
-// Blue underline
+// Is active
 
-.header__links {
-
-  margin-left: 94px;
-  margin-right: 345px;
-  gap: 0 46px;
-  display: flex;
+.header {
+  &__links {
+    margin-left: 94px;
+    margin-right: 345px;
+    gap: 0 46px;
+    display: flex;
 
   &--nav-blue {
-
     position: relative;
   }
 
   &--is-active {
 
     &::after {
-
       content: '';
       position: absolute;
       bottom: -33px;
@@ -47,53 +50,50 @@
       background-color: $colorAccent;
     }
   }
+  }
 }
 
-// Active is blue
-
-.header__socials {
-  color: var(--accent-color);
-
-    &__links {
-
-      &--is-active {
-        
-        color: $colorAccent;
-      }
-    }
+.header__socials.header__links--is-active {
+  color: $colorAccent;
 }
 
 // Socials
 
-.header__socials {
-  font-weight: 500;
-  color: $colorMainText;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  display: flex;
-  transition: $transitionKit;
+.header {
 
-  &:visited {
-    color: inherit;
+&__socials {
+    font-weight: 500;
+    color: $colorMainText;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    display: flex;
+    transition: $transitionKit;
   }
+  
+    &:visited {
+    color: inherit;
+    }
 }
 
 // Contacts
 
-.header__contact {
-  
-  margin-left: 0;
-  display: flex;
-  gap: 30px;
+.header {
+
+  &__contact {
+    margin-left: 0;
+    display: flex;
+    gap: 30px;
+  }
 
   &__icon-box {
     display: flex;
-
-    &__contact-links {
-      color: $colorSmallText;
-    }
   }
+  
+  &__contact-links {
+      color: $colorSmallText;
+  }
+  
 }
 
 // Icons in contacts

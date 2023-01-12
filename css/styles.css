@@ -288,13 +288,11 @@ justify-content: center;
 .team__name {
   font-weight: 500;
   font-size: 16px;
-  letter-spacing: 0.03em;
   line-height: 1.2;
   text-align: center;
 }
 .team__profession {
   font-size: 16px;
-  letter-spacing: 0.03em;
   line-height: 1.2;
   color: var(--small-text-color);
   margin-top: 10px;
@@ -687,6 +685,7 @@ color: var(--secondary-color);
   color: var(--small-text-color);
   margin-left: 8px;
 }
+
 /* Check */
 
 .check.option {

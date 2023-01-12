@@ -15,25 +15,20 @@
         display: flex;
         gap: 10px;
     }
-}
 
-// Buttons' functionality
-
-.footer-button__link {
-
+    &__link {
     @include social-buttons;
     transition: background-color $transitionKit;
     background-color: $colorInactiveFooterButton;
     box-shadow: 0px 4px 4px 0px #00000026;
-    padding: 12px;
-    
-    &:hover, &:focus {
-                    
+    padding: 12px; 
+
+        &:hover, &:focus {
         background-color: $colorAccent;
+        }
     }
 
     &__button {
-        fill: $colorSecondary;
+    fill: $colorSecondary;
     }
-
 }

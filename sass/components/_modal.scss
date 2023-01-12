@@ -2,7 +2,6 @@
 // Modal layout
 
 .modal {
-
     position: fixed;
     top: 0;
     left: 0;
@@ -15,34 +14,34 @@
     z-index: 1;
 
     &__window {
-
-        position: relative;
-        width: 528px;
-        height: 581px;
-        border-radius: 4px;
-        background-color: $colorSecondary;
-        transition: $transitionKit;
-        box-shadow: 0px 2px 1px 0px #00000033;
-        box-shadow: 0px 1px 1px 0px #00000024;
-        box-shadow: 0px 1px 3px 0px #0000001F;
-        text-align: center;
-
-        &__close-button {
-
-            position: absolute;
-            right: 8px;
-            top: 8px;
-            padding: 6px;
-            border: 1px solid $borderCloseButton;
-            background-color: $colorSecondary;
-            border-radius: 50%;
-            cursor: pointer;
-
-            &__close-icon {
-                display: block;
-            }
-        }
+    position: relative;
+    width: 528px;
+    height: 581px;
+    border-radius: 4px;
+    background-color: $colorSecondary;
+    transition: $transitionKit;
+    box-shadow: 0px 2px 1px 0px #00000033;
+    box-shadow: 0px 1px 1px 0px #00000024;
+    box-shadow: 0px 1px 3px 0px #0000001F;
+    text-align: center;
     }
+
+    &__close-button {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    padding: 6px;
+    border: 1px solid $borderCloseButton;
+    background-color: $colorSecondary;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+
+    &__close-icon {
+        display: block;
+    }
+    
+
 }
 
 .is-hidden {
@@ -56,7 +55,6 @@
 
 .modal-form {
     padding: 40px;
-
     > p {
         font-size: 20px;
         font-weight: 700;
@@ -67,26 +65,26 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-
-        &__input-box {
-            margin-bottom: 10px;
-        }
     }
 
+    &__input-box {
+        margin-bottom: 10px;
+    }
 }
 
 // Labels and inputs
 
-.modal-form__label {
+.modal-form {
 
-    position: relative;
-    font-size: 12px;
-    color: $colorSmallText;
-    text-align: left;
-    display: block;
+    &__label {
+        position: relative;
+        font-size: 12px;
+        color: $colorSmallText;
+        text-align: left;
+        display: block;
+    }
 
     &__input {
-
         border: 1px solid $borderModalInput;
         border-radius: 4px;
         padding: 15px 42px;
@@ -98,7 +96,6 @@
     }
 
     &__icon {
-
         position: absolute;
         top: 50%;
         left: 15px;
@@ -107,25 +104,25 @@
     }
 }
 
-.modal-form__label {
-
-    &:focus-within {
-
-        &__input {
-
-            border: 1px solid $colorAccent;
-        }
+.modal-form {
+    &:nth-child(4) {
+        margin-bottom: 20px;
     }
 }
 
-.modal-form__label {
+// Policy
 
-    &:focus-within {
+.modal {
 
-        &__icon {
+    &__policy-statement {
+        line-height: 1.7;
+        color: $colorSmallText;
+        margin-left: 8px;
+    }
 
-            fill: $colorAccent;
-        }
+    &__policy-rules--link {
+        color: $colorAccent;
+        text-decoration: under;
     }
 }
 
@@ -134,13 +131,11 @@
 .modal-form {
 
     & textarea {
-
         resize: none;
         height: auto;
         padding-left: 16px;
 
         &::placeholder {
-
             color: $colorModalPlaceholder;
         }
     }
@@ -149,49 +144,34 @@
 // Check
 
 .check.option {
-    position: relative;
-    display: flex;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .check__input {
-    
-    opacity: 0;
-
-    &__box {
-
-        position: absolute;
-        top: 3px;
-        left: 15px;
-        width: 16px;
-        height: 15px;
-        overflow: hidden;
-        border-radius: 2px;
-        background-color: $colorSecondary;
-        border: 1px solid $colorMainText;
-    }
+  opacity: 0;
 }
+
+.check__box {
+  position: absolute;
+  top: 3px;
+  left: 15px;
+  width: 16px;
+  height: 15px;
+  overflow: hidden;
+  border-radius: 2px;
+  background-color: $colorSecondary;
+  border: 1px solid $colorMainText;
+}
+
+/* Checked */
 
 .check__input:checked + .check__box {
-
-    background-image: url('../css/images/checked.svg');
-    width: 16px;
-    height: 15px;
-    border: none;
-}
-
-// Policy
-
-.modal__policy-statement {
-    line-height: 1.7;
-    color: $colorSmallText;
-    margin-left: 8px;
-
-    &__policy-rules--link {
-
-        color: $colorAccent;
-        text-decoration: underline;
-    }
+  background-image: url(images/checked.svg);
+  width: 16px;
+  height: 15px;
+  border: none;
 }
 
 // Submit button
@@ -208,11 +188,17 @@
     box-shadow: 0px 4px 4px 0px #00000026;
 }
 
+// Hover and focus
+
 .modal-form {
+    &__label:focus-within &__input {
+        border: 1px solid $colorAccent;
+    }
+}
 
-    &:nth-child(4) {
-
-        margin-bottom: 20px;
+.modal-form {
+    &__label:focus-within &__icon {
+        fill: $colorAccent;
     }
 }
 
